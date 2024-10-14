@@ -93,9 +93,3 @@ console.log("Aprendendo " + linguagem); // Saída: "Aprendendo Javascript"
     // não redeclarar o tipo, mas apenas trocar o valor, ele permite
 linguagem = "Java"; // Isso é válido, apenas estamos atribuindo um novo valor
 console.log("Aprendendo " + linguagem); // Saída: "Aprendendo Java"
-
-
-
-// 3. const não permite fazer redeclarações muito menos alterar o valor da variavel, desde que a variavel nao seja um objeto ou um array, porque, nesse caso, é possivel modificar certas propriedades ou elementos
-
-

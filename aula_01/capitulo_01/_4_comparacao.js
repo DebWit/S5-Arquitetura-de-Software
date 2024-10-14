@@ -1,4 +1,4 @@
-// _______________ 1. tipos de comparadores
+// _______________ Tipos de comparadores
 
 // Javascript possui dois operadores de comparação:
 //1. == A comparação leva em conta somente os valores envolvidos. Isso quer dizer que, caso sejam de tipos diferentes, ocorrerão coerções implícitas, as quais nem sempre têm o funcionamento mais intuitivo.

@@ -74,5 +74,66 @@ processarPedido(vender);  // Passa a função 'vender' como argumento
           //Registrando o pedido no sistema...
           //Processando pedido de venda...
 
+
+//  ____________________________________ Arrow function ____________________________________
+
+// A arrow function (função de seta) é uma forma simplificada de declarar funções em JavaScript, introduzida no ECMAScript 6 (ES6). Ela utiliza o símbolo => para separar a lista de parâmetros do corpo da função, o que a torna mais concisa e elegante em muitas situações.
+
+// sintaxe basica
+const nomeDaFuncao = (parametros) => {
+    return resultado;
+};
+
+// ou, simplificando
+const nomeDaFuncao2 = parametro => resultado;
+
+// ___________ caracteristicas da arrow function
+// _______________ 1. Parênteses Opcionais:
+
+// Se a função tiver um único parâmetro, você pode omitir os parênteses.
+// exemplo: 
+const dobrado = valor => valor * 2; // Um parâmetro, sem parênteses
+const soma = (a, b) => a + b;     // Dois parâmetros, parênteses obrigatórios
+
+// _______________ 2. Chaves Opcionais:
+// Se o corpo da função tiver apenas uma instrução, você pode omitir as chaves.
+// Quando as chaves são omitidas, o return também é implícito.
+//exemplo: 
+const triplo3 = valor => valor * 3; // Sem chaves, return implícito
+const quadrado2 = valor => {        // Com chaves, return obrigatório
+    return valor * valor;
+};
+
+// _______________ 3. Sem nome:
+// Uma arrow function não tem nome próprio, ou seja, é uma função anônima. No entanto, você pode armazená-la em uma variável ou constante, o que dá a ela um "nome".
+
+const saudacao = () => {
+    console.log("Olá, mundo!");
+};
+saudacao(); // Saída: Olá, mundo!
+
 //  ____________________________________ Funções de alta ordem ____________________________________
-// continuar daqui
+// Funções de alta ordem são funções que podem receber outras funções como parâmetros ou retornar funções. Elas permitem um nível avançado de manipulação de código, onde funções podem ser tratadas como qualquer outro valor.
+
+function g() {
+    function outraFuncao() {
+        console.log('Fui criada por g');
+        // nao tem retorno
+    }
+    function maisUma() {
+        console.log('Sou mais uma');
+        return () => console.log('A'); // esse retorno foi definido como uma função anonima, voce percebe pelos parenteses apos o return, eles indicam que há uma função sem nome que recebe "" de parâmetro
+    }
+    return [outraFuncao, maisUma]; // retorno da função g() é uma lista, onde o primeiro item sera outraFuncao e o segundo maisUma
+}
+
+g()[0](); // saída: Fui criada por g
+g()[1](); // saída: Sou mais uma
+g()[1]()(); // saída: Sou mais uma  A
+// Aqui, você está executando dois pares de parênteses. A primeira chamada g()[1]() chama a função maisUma, e a segunda chamada () executa a função anônima retornada por maisUma. O primeiro g()[1]() chama a função maisUma, que imprime 'Sou mais uma' e retorna a função anônima () => console.log('A'). O segundo () executa a função anônima retornada, que imprime 'A'.
+
+// Quando temos funções alta ordem tempos funções que chamamos de:
+// - Função externa: É uma função que contém outras funções dentro dela.
+// - Função interna: É uma função que é declarada dentro de outra função.
+// Além disso, outro termo importante é o
+// - Escopo externo: É o ambiente onde as variáveis da função externa estão disponíveis para a função interna.
