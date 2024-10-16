@@ -1,0 +1,2 @@
+// Capítulo 3 - Execução Síncrona e Assíncrona
+// Este capítulo começa explicando dois modelos de execução de código: síncrona e assíncrona. Esses dois conceitos são cruciais para entender como o JavaScript gerencia operações que demoram para serem concluídas (por exemplo, leitura de arquivos, requisições de rede, etc.).

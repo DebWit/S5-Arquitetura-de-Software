@@ -1,0 +1,4 @@
+// 3.1 Modelo Single Threaded
+//Aqui, a apostila fala sobre o fato de que o JavaScript é single-threaded, ou seja, ele executa uma coisa de cada vez. Diferentemente de linguagens que podem executar múltiplos processos ao mesmo tempo, O JAVASCRIPT SO EXECUTA UMA LINHA POR VEZ, em uma única thread. Isso cria uma sequência linear de execução.
+
+//Quando algo demora muito para ser concluído, como ler um arquivo do disco ou fazer uma requisição a um servidor, você não quer que o código inteiro pare de funcionar até que essas operações terminem. Para contornar isso, o JavaScript usa operações assíncronas.

@@ -77,4 +77,4 @@ const encontraVeiculos = (marca) => {
   
 // Testando a função
 console.log(encontraVeiculos("Volkswagen")); // Devolve um array com os veículos da marca 'Volkswagen'
-console.log(encontraVeiculos("Ford"));     // Devolve um array com os veículos da marca 'Ford'
+console.log(encontraVeiculos("Ford"));     // Devolve um array com os veículos da marca 'Ford
