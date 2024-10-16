@@ -77,4 +77,3 @@ function demorada() {
 
 // Saída: Demorou, mas deu certo!
 
-  
